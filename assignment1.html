@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    
+<div class="container" style="border: 2px solid black; background-color: #87CEEB";>
+<div class="row"><h1 style="text-align: center; color: black;"><b>Calculator</b></h1></div>
+       
+        <div class="mb-3">
+          
+          <input type="text" class="adi" id="adi" style="width: 1110px;
+          height: 45px;  border: 2px solid black;">
+         
+        </div>
+       
+        
+        
+       
+        <div class="row">
+            <div class="col-md-3" >
+                <div class="row adi"><button onclick="click1(9)">9</button></div>
+                <div class="row adi"><button onclick="click1(6)">6</button></div>
+            </div>
+            <div class="col-md-3" >
+                <div class="row adi"><button onclick="click1(8)" >8</button></div>
+                <div class="row adi"><button onclick="click1(5)">5</button ></div>
+            </div>
+            <div class="col-md-3" >
+                <div class="row adi"><button onclick="click1(7)">7</button></div>
+                <div class="row adi"><button onclick="click1(4)">4</button></div>
+            </div>
+            <div class="col-md-3">
+                <div class="row adi"><button style="height: 97px" onclick="equal()">=</button></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3" >
+                <div class="row adi"><button onclick="click1(3)">3</button></div>
+                <div class="row adi"><button onclick="click1(0)">0</button></div>
+            </div>
+            <div class="col-md-3" >
+                <div class="row adi"><button onclick="click1(2)" >2</button></div>
+                <div class="row adi"><button onclick="click1('-')" >-</button></div>
+            </div>
+            <div class="col-md-3" >
+                <div class="row adi"><button onclick="click1(1)" >1</button></div>
+                <div class="row adi" id="adi1"><button onclick="click1('+')">+</button></div>
+            </div>
+            <div class="col-md-3" >
+                <div class="row adi"><button onclick="click1('*')">*</button></div>
+                <div class="row adi"><button onclick="click1('/')">/</button></div>
+            </div>
+
+           
+            
+           
+        </div> 
+        <div class="row" >
+            <div class="col-md-6 adi" ><button class="ary1" onclick="clear1()">Reset</button></div>
+            <div class="col-md-6 adi"><button class="ary1" onclick="clear">Delete</button></div>
+        </div>
+           
+    
+
+    
+      
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script>
+        var st="";
+       function click1(a){
+          st=st+a;
+          document.getElementById('adi').value=st;   
+
+       }
+
+       function equal(){
+        st=eval(st);
+        document.getElementById('adi').value=st;   
+       }
+
+       function clear1(){
+        st="";
+        document.getElementById('adi').value=st;
+       }
+
+       function clear2(){
+        st=st.slice(0,st.length-1);
+        document.getElementById('adi').value=st;
+       }
+</script>
+</body>
+</html>
